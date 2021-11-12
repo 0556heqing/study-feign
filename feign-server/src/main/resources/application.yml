@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+cluster:
+  nacos:
+    node1: 10.6.124.134:8848
+
+spring:
+  application:
+    name: study-feign-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${cluster.nacos.node1}
+        register-enabled: true
+        group: study
+
